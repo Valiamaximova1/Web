@@ -1,0 +1,20 @@
+{
+  "brand": "AirNova ✈",
+  "nav": { "flights": "Flights", "deals": "Deals", "support": "Support", "signin": "Sign in" },
+  "hero": {
+    "title": "Book your next flight in seconds",
+    "subtitle": "Smart search, real-time seatmaps, transparent pricing."
+  },
+  "search": {
+    "oneway": "One way",
+    "round": "Round trip",
+    "from": "From (IATA)",
+    "to": "To (IATA)",
+    "dates": "Dates",
+    "depart": "Depart date",
+    "return": "Return date",
+    "passengers": "Passengers",
+    "searchBtn": "Search",
+    "hintOneway": "* For one-way select only a depart date."
+  }
+}
