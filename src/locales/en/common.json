@@ -16,5 +16,23 @@
     "passengers": "Passengers",
     "searchBtn": "Search",
     "hintOneway": "* For one-way select only a depart date."
+  },
+  "login": {
+    "title": "Sign in to AirNova",
+    "subtitle": "Manage flights, crews and routes in one place.",
+    "signIn": "Sign in",
+    "welcomeBack": "Welcome back.",
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot password?",
+    "submit": "Sign in",
+    "loading": "Signing in...",
+    "noAccount": "Don't have an account?",
+    "signUp": "Create one",
+    "show": "Show",
+    "hide": "Hide",
+    "errorInvalid": "Invalid email or password"
   }
 }
+
