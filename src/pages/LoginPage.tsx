@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useAuth } from "../auth/context"; // <- важно
+import { useAuth } from "../auth/context"; 
 
 export default function LoginPage() {
   const { t } = useTranslation();
@@ -35,8 +35,9 @@ export default function LoginPage() {
     if (last) setEmail(last);
   }, []);
 
-  return (
+  return (       
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-indigo-50 flex">
+
       {/* Left hero (desktop) */}
       <div className="hidden lg:flex flex-1 items-center justify-center p-10">
         <div className="max-w-md">
