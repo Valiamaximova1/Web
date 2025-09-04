@@ -1,10 +1,12 @@
 {
   "brand": "AirNova ✈",
   "nav": { "flights": "Flights", "deals": "Deals", "support": "Support", "signin": "Sign in" },
+
   "hero": {
     "title": "Book your next flight in seconds",
     "subtitle": "Smart search, real-time seatmaps, transparent pricing."
   },
+
   "search": {
     "oneway": "One way",
     "round": "Round trip",
@@ -17,6 +19,7 @@
     "searchBtn": "Search",
     "hintOneway": "* For one-way select only a depart date."
   },
+
   "login": {
     "title": "Sign in to AirNova",
     "subtitle": "Manage flights, crews and routes in one place.",
@@ -34,10 +37,12 @@
     "hide": "Hide",
     "errorInvalid": "Invalid email or password"
   },
-    "register": {
+
+  "register": {
     "title": "Create an AirNova account",
     "subtitle": "Start quickly with secure access.",
     "header": "Create account",
+    "pageTitle": "Registration",
     "welcome": "Enter your email and password.",
     "email": "Email",
     "password": "Password",
@@ -47,23 +52,58 @@
     "loading": "Creating...",
     "hasAccount": "Already have an account?",
     "signIn": "Sign in",
+    "optional": "Optional profile details",
+    "optionalHint": "Helpful for bookings and online check-in.",
+    "errorEmail": "Invalid email.",
+    "errorTerms": "You must accept the Terms.",
     "errorMismatch": "Passwords do not match.",
     "errorWeak": "Password is too weak (min 8 chars).",
     "errorExists": "Email already exists or request failed."
   },
-    "profile": {
+
+  "profile": {
     "firstName": "First Name",
     "lastName": "Last Name",
     "phone": "Phone",
     "dob": "Date of Birth",
     "country": "Country (ISO2)",
     "language": "Language",
+    "currency": "Currency",
     "save": "Save Profile",
     "saving": "Saving...",
     "errorInvalid": "Invalid input data.",
     "errorExists": "Email already exists.",
-    "success": "Profile updated successfully."
-  }
-  
-}
+    "success": "Profile updated successfully.",
+    "errorPhone": "Invalid phone format. Example: +359888123456.",
+    "errorCountry": "Country code must be ISO2 (e.g., BG).",
+    "errorDob": "Invalid date."
+  },
 
+  "consents": {
+    "newsletter": "I want to receive offers and news by email.",
+    "terms1": "By creating an account I accept the",
+    "terms2": "Terms of Service",
+    "terms3": "and the Privacy Policy."
+  },
+
+  "ui": {
+    "show": "Show",
+    "hide": "Hide",
+    "whyRegister": "Why register",
+    "benefits": {
+      "jwt": "JWT + Refresh (HttpOnly)",
+      "gateway": "Unified API Gateway",
+      "security": "Protected APIs & Auto-refresh",
+      "faster": "Faster bookings and check-in",
+      "preferences": "Saved preferences (language/currency)"
+    }
+  },
+
+  "password": {
+    "empty": "Start typing…",
+    "weak": "Weak",
+    "fair": "Fair",
+    "good": "Good",
+    "strong": "Strong"
+  }
+}

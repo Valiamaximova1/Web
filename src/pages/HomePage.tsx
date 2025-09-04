@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SearchBar from "../components/SearchBar";
 
@@ -8,7 +7,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-full flex flex-col">
-      <Header />
       <section className="relative"> {/* махнато overflow-hidden */}
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white pointer-events-none" />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">

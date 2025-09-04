@@ -31,7 +31,7 @@ export default function DateRangePicker({
             mode="range"
             selected={value}
             onSelect={(r) => onChange(r)}
-            numberOfMonths={2}
+            numberOfMonths={1}
             defaultMonth={value?.from}
             className="text-sm"
             styles={{
