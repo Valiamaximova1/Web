@@ -8,13 +8,13 @@ export type RegisterPayload = {
   firstName?: string;
   lastName?: string;
   phone?: string;
-  countryCode?: string;   // ISO2, напр. BG
-  langCode?: string;      // 'bg' | 'en'
-  currency?: string;      // 'BGN' | 'EUR'
+  countryCode?: string;
+  langCode?: string;
+  currency?: string;
   newsletter?: boolean;
-  termsVersion?: string;  // напр. "v1.0"
-  acceptTerms?: boolean;  // true
-  dateOfBirth?: string;   // YYYY-MM-DD
+  termsVersion?: string;
+  acceptTerms?: boolean;
+  dateOfBirth?: string;
 };
 
 export type AuthCtx = {
@@ -32,3 +32,4 @@ export const useAuth = () => {
   if (!ctx) throw new Error("useAuth must be used inside <AuthProvider>");
   return ctx;
 };
+
