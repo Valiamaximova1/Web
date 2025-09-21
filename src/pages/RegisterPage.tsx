@@ -44,7 +44,7 @@ export default function RegisterPage() {
   const [currency, setCurrency] = useState("BGN");
   const [newsletter, setNewsletter] = useState(true);
 
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
@@ -92,16 +92,16 @@ export default function RegisterPage() {
     if (currency) payload.currency = currency;
     payload.newsletter = !!newsletter;
 
-    setLoading(true);
-    const ok = await register(payload);
-    setLoading(false);
-
-    if (ok) {
-      localStorage.setItem("lastLoginEmail", email.trim());
-      nav("/flights");
-    } else {
-      setErr(t("register.errorExists", "Email already exists or the request failed."));
-    }
+  console.log("[REG] payload", payload);
+const ok = await register(payload);
+console.log("[REG] register ->", ok);
+if (ok) {
+  const e = payload.email.trim().toLowerCase();
+  console.log("[REG] navigating to /verify-email?email=", e);
+  nav(`/verify-email?email=${encodeURIComponent(e)}`, { replace: true });
+} else {
+  setErr(t("register.errorExists", "Email already exists or the request failed."));
+}
   }
 
   return (

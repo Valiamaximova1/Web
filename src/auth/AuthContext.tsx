@@ -4,7 +4,10 @@ import type { AuthCtx, User, RegisterPayload } from "./context";
 import { tokenStore } from "../lib/tokenStore";
 
 const ID_BASE =
-  import.meta.env.VITE_IDENTITY_BASE || import.meta.env.VITE_API_BASE || "";
+  import.meta.env.VITE_ID_BASE ??
+  import.meta.env.VITE_IDENTITY_BASE ??
+  import.meta.env.VITE_API_BASE ?? // последен fallback, ако ползваш gateway
+  "";
 
 /* ------------ WARN ако базовият URL е празен (честа причина) ------------- */
 if (!ID_BASE) {
@@ -108,7 +111,11 @@ async function readJsonSafe(res: Response): Promise<any | null> {
 
 /* ----------------------------- PROVIDER ---------------------------------- */
 
-export default function AuthProvider({ children }: { children: React.ReactNode }) {
+export default function AuthProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [user, setUser] = React.useState<User>(null);
   const [accessToken, setAccessToken] = React.useState<string | null>(null);
 
@@ -119,7 +126,7 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
     setUser(u);
   };
 
-  // авто login при reload чрез refresh cookie
+  // авто-login при reload чрез refresh cookie
   React.useEffect(() => {
     (async () => {
       try {
@@ -129,8 +136,7 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
         });
         if (!res.ok) return;
 
-        const data = await readJsonSafe(res); // няма да гърми
-        // токен от body или от header
+        const data = await readJsonSafe(res);
         const tok = extractTokenFromAny(data) ?? extractTokenFromHeaders(res);
         if (!tok) return;
 
@@ -172,6 +178,7 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
       if (!res.ok) return false;
 
       const data = await readJsonSafe(res);

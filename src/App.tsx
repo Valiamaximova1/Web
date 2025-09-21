@@ -11,6 +11,7 @@ import SupportPage from "./pages/SupportPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import FlightDetailsPage from "./pages/FlightDetailsPage";
+import VerifyEmailPage from "./pages/VerifyEmailPage";
 
 // защитени
 import FlightsPage from "./pages/FlightsPage";
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
       { path: "login", element: <LoginPage /> },
         { path: "flights", element: <FlightsPage /> },
       { path: "register", element: <RegisterPage /> },
+          { path: "verify-email", element: <VerifyEmailPage /> },
 
       // защитени зони
       {
